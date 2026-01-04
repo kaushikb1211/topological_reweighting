@@ -1,0 +1,1 @@
+What I think was going on is that residues were misaligned. Exp Data had residues 1-40 but the data file did not have shifts for resid 1 and 40. The MD data had timeseries from 0-39 residues. So residue 2 for exp data was being reweighted against that of resid 3 of MD data. Had to change that in the compdata and reweighting results look more reasonable.
